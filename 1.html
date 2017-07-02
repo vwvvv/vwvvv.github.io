@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #div1 {width: 100px;height: 100px;background: blue; position:absolute; top: 50px;left: 0px;}
+    </style>
+</head>
+<body>
+    <input id="btn1" type="button" value="移动" onclick="startMove()" />
+    <input id="btn2" type="button" value="停止" onclick="stop()" />
+    <input id="btn3" type="button" value="二倍速度" onclick="double()" />
+    <div id="div1"></div>
+<script>
+    var timer=null;
+    var oDiv=document.getElementById('div1');
+    function startMove() 
+    { 
+        timer=setInterval (function () {
+            oDiv.style.left=oDiv.offsetLeft+10+'px';
+        },30);
+    }
+    function double() 
+    { 
+        timer=setInterval (function () {
+            oDiv.style.left=oDiv.offsetLeft+20+'px';
+        },30);
+    }
+    function stop()
+    {
+        clearInterval(timer);
+    }
+    </script>
+</body>
+</html>
