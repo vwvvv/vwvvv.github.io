@@ -12,7 +12,6 @@
 <body>
     <input id="btn1" type="button" value="移动" onclick="startMove()" />
     <input id="btn2" type="button" value="停止" onclick="stop()" />
-    <input id="btn3" type="button" value="二倍速度" onclick="double()" />
     <div id="div1"></div>
 <script>
     var timer=null;
@@ -21,12 +20,6 @@
     { 
         timer=setInterval (function () {
             oDiv.style.left=oDiv.offsetLeft+10+'px';
-        },30);
-    }
-    function double() 
-    { 
-        timer=setInterval (function () {
-            oDiv.style.left=oDiv.offsetLeft+20+'px';
         },30);
     }
     function stop()
